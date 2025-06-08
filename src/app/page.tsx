@@ -1,24 +1,29 @@
 "use client";
 
-export default function HomePage() {
+import GlassCard from "@/components/glass-card";
+
+export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-black text-white">
+    <main className="relative min-h-screen flex items-center justify-center overflow-hidden text-black dark:text-white transition-colors duration-300">
+      {/* Gradient Background */}
       <div
-        className="relative z-10 mx-auto mt-40 max-w-lg rounded-xl
-                bg-black/30 border border-white/10 shadow-md
-                backdrop-blur-md backdrop-saturate-150
-                p-6 text-white"
-      >
-        <h1 className="text-3xl font-bold mb-4">Glassmorphism Test</h1>
-        <p className="mb-4">If this looks frosty, you're set 👍</p>
-        <button
-          className="px-4 py-2 rounded-lg
-                     bg-white/20 backdrop-blur-sm hover:bg-white/30
-                     transition"
-        >
-          Test Button
+        className="
+        absolute inset-0 -z-10 
+        bg-gradient-to-br from-purple-300 via-white 
+        to-gray-300 dark:from-gray-900 dark:via-black dark:to-gray-800
+        "
+      />
+
+      {/* Glass Card */}
+      <GlassCard className="max-w-md text-center text-black dark:text-white">
+        <h1 className="text-2xl font-bold mb-2">Frosted UI</h1>
+        <p className="mb-4 text-black/70 dark:text-white/70">
+          This is a reusable glassmorphic card that responds to dark mode!
+        </p>
+        <button className="px-4 py-2 rounded-lg bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 transition">
+          Try Me
         </button>
-      </div>
+      </GlassCard>
     </main>
   );
 }

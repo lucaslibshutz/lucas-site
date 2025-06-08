@@ -1,19 +1,7 @@
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("/fonts/SF-Pro-Display-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@import "tailwindcss";
 
-html {
-  @apply bg-white text-gray-900;
-}
-
-html.dark {
-  @apply bg-gray-950 text-gray-100;
-}
-
-body {
-  @apply font-sans;
+@layer utilities {
+  .backdrop-glass {
+    @apply bg-white/5 dark:bg-white/10 backdrop-blur-xl border border-white/10 dark:border-white/20;
+  }
 }
