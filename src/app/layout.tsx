@@ -1,17 +1,17 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-import { ReactNode } from "react";
-import { ThemeProvider } from "next-themes";
+import Header from "@/components/header";
 
-export const metadata = {
-  title: "Lucas Site",
-  description: "Portfolio inspired by Apple.com",
-};
-
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" suppressHydrationWarning className="antialiased">
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <html lang="en" suppressHydrationWarning>
+      <body className="font-sans">
+        <ThemeProvider>
+          <Header />
           {children}
         </ThemeProvider>
       </body>
