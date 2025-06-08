@@ -2,6 +2,6 @@
 
 @layer utilities {
   .backdrop-glass {
-    @apply bg-white/5 dark:bg-white/10 backdrop-blur-xl border border-white/10 dark:border-white/20;
+    @apply bg-white/5 dark:bg-white/8 backdrop-blur-xl border border-white/10 dark:border-white/20;
   }
 }
